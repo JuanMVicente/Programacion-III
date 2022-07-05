@@ -1,0 +1,2 @@
+p = int(input("Cantidad de barras de pan del día anterior: "))
+print("El precio habitual es de " + str(p*3.49) + ", pero tiene un descuento de " + str(round(p*3.49*0.6,2)) + ", por lo que el costo total es de " + str(round(p*3.49*0.4,2)))

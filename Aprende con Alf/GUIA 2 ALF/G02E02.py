@@ -1,0 +1,5 @@
+n = input("Nombres: ")
+a = input("Apellidos: ")
+print((n+ " " +a).upper())
+print((n+ " " +a).lower())
+print((n+ " " +a).title())
