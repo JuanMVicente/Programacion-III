@@ -5,15 +5,16 @@ import matplotlib.pyplot as plt
 
 
 def main():
-    alumnos = [250,230,265]
-    alumnos = pd.Series(alumnos)
+    ventas = {'Abril':250,'Mayo':230,'Junio':265}
+    serie = pd.Series(ventas)
     titulo = "diagrama_ventas"
-    diagrama_sectores(alumnos, titulo)
+    diagrama_sectores(serie, titulo)
+    serie.to_list()
 
 
 def diagrama_sectores(serie, titulo): 
     fig, ax = plt.subplots()
-    ax.pie(serie)
+    ax.pie(serie, labels=list(serie.keys()))
     ax.set_title(titulo)
     plt.savefig(titulo + '.png')
 
